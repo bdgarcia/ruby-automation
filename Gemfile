@@ -1,15 +1,21 @@
 source 'http://rubygems.org'
 
+ruby '2.4.3'
 gem 'capybara'
 gem 'poltergeist'
+gem 'phantomjs'
 gem 'rspec'
 gem 'selenium-webdriver'
+gem 'activesupport'
 # Select2 gem allow trigger for dropdown
 gem 'capybara-select2'
+gem 'pry'
+gem 'rubocop'
+gem 'axe-matchers'
 gem 'rspec_junit_formatter'
 gem 'factory_bot'
 gem 'rspec-repeat'
-gem 'rubocop'
+
 gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 
 gem 'dotenv-rails', groups: [:development, :test]
