@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
@@ -34,48 +36,38 @@ Capybara.register_driver :headless_chrome do |app|
   Capybara.javascript_driver = :headless_chrome
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-      chromeOptions: { args: %w(headless disable-gpu) }
+    chromeOptions: { args:
+                           %w[headless disable-gpu] }
   )
-
-  Capybara::Selenium::Driver.new(app, {
-      browser: :chrome,
-      desired_capabilities: capabilities,
-      profile: profile
-  })
+  Capybara::Selenium::Driver.new(app,
+                                 browser: :chrome,
+                                 desired_capabilities: capabilities,
+                                 profile: profile)
 end
 
 # Local browser
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, {
-      browser: ENV['BROWSER_NAME'].to_sym,
-      args: ['--window-size=1920,1080'],
-      profile: profile
-  })
+  Capybara::Selenium::Driver.new(app,
+                                 browser: ENV['BROWSER_NAME'].to_sym,
+                                 args: ['--window-size=1920,1080'],
+                                 profile: profile)
 end
 
-
-
 RSpec.configure do |config|
-
   config.include Capybara::DSL
   config.include Capybara::RSpecMatchers
 
   config.alias_it_should_behave_like_to :it_has_behavior, 'has behavior:'
-
-
-
 
   config.include RSpec::Repeat
   config.around :each, type: :feature do |example|
     repeat example, 3.times, clear_let: false, verbose: true
   end
 
-
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
-    expectations.syntax = [:should, :expect]
+    expectations.syntax = %I[should expect]
   end
-
 
   # rspec-mocks config goes here. You can use an alternate test double
   # library (such as bogus or mocha) by changing the `mock_with` option here.
@@ -86,6 +78,5 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  config.filter_run_excluding :exclude => true
+  config.filter_run_excluding exclude: true
 end
-
