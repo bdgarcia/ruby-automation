@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  options {
-    pipelineTriggers([pollSCM('H/5 * * * *')])
-  }
   stages {
     stage('run tests') {
       steps {
