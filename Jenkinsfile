@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options {
-    properties([pipelineTriggers([pollSCM('H * * * *')])])
+    [pipelineTriggers([pollSCM('H/5 * * * *')])]
   }
   stages {
     stage('run tests') {
