@@ -1,9 +1,6 @@
 pipeline {
   agent any
-  when {
-  branch 'master'
   triggers { pollSCM('H/5 * * * *') }
-  }
   stages {
     stage('run tests') {
       steps {
