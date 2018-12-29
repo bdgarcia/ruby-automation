@@ -15,10 +15,4 @@ export SPEC_OPTS="--no-drb --format documentation --format html --out jenkins/rs
       }
     }
   }
-  post {
-    always {
-      html 'jenkins/rspec.html'
-    }
-
-  }
 }
