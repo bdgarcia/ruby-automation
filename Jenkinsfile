@@ -17,9 +17,7 @@ export SPEC_OPTS="--no-drb --format documentation --format html --out jenkins/rs
   }
   post {
     always {
-      archiveArtifacts(artifacts: 'build/libs/**/*.jar', fingerprint: true)
-      junit './build/reports/rspec_results.xml'
-
+      html 'jenkins/rspec.html'
     }
 
   }
