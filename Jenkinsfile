@@ -20,6 +20,7 @@ publishHTML target: [
             reportDir: 'jenkins',
             reportFiles: 'rspec.html',
             reportName: 'Report'
+            reportTitles: 'Ruby-Automation'
             ]
       }
     }
