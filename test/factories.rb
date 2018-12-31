@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require './test/models/user'
 # use by calling FactoryBot.create(:facebook_user)
 # see https://devhints.io/factory_bot for further details
 FactoryBot.define do
