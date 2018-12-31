@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './tests/spec_helper.rb'
+require './test/spec_helper.rb'
 
 describe 'Search', typr: :feature do
   describe 'Search google' do
