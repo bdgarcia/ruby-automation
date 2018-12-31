@@ -18,7 +18,7 @@ require 'rspec/repeat'
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. It is recommended that you do not name files to
 # end with _spec.rb.
-Dir['./tests/google/pageobjects/*.rb'].each { |f| require f }
+Dir['./test/google/pageobjects/*.rb'].each { |f| require f }
 
 # Load env variables from .env
 Dotenv.overload '.env'
@@ -79,4 +79,6 @@ RSpec.configure do |config|
   end
 
   config.filter_run_excluding exclude: true
+  config.include FactoryBot::Syntax::Methods
+  FactoryBot.find_definitions
 end
