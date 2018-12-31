@@ -12,7 +12,7 @@ export DRIVER=SELENIUM
 export RAILS_ENV=test
 export SPEC_OPTS="--no-drb --format documentation --format html --out jenkins/rspec.html"
 
-/Users/brunogarcia/.rvm/gems/ruby-2.4.3/bin/bundle exec rspec "./tests/google/search.rb"'''
+/Users/brunogarcia/.rvm/gems/ruby-2.4.3/bin/bundle exec rspec "./test/google/search.rb"'''
 
 publishHTML target: [
             allowMissing: false,
