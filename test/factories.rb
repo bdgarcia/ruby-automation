@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# use by calling FactoryBot.create(:facebook_user) see https://devhints.io/factory_bot for further details
+# use by calling FactoryBot.create(:facebook_user)
+# see https://devhints.io/factory_bot for further details
 FactoryBot.define do
   factory :facebook_user, class: User do
     name { 'John' }

@@ -13,6 +13,7 @@ require 'faker'
 require 'pry'
 require 'site_prism'
 require 'rspec/repeat'
+require 'factory_bot'
 
 # Requires supporting ruby files with custom helper methods in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
