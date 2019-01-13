@@ -1,7 +1,5 @@
 # ruby-automation
 
-Ejemplo de busqueda en google:
-
 ## Front end testing
 En el archivo **/test/google/search.rb** hay un ejemplo de test de front end sencillo, que consiste en realizar una busqueda en google y esperar un término en la página de resultados.
 En este ejemplo se puede observar como se utilizan los pageobjects con **SitePrism**, como se pueden hacer assertions, y algunas sentencias basicas para navegar con selenium en ruby
