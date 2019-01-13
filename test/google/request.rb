@@ -1,7 +1,7 @@
 require "net/https"
 require "uri"
 
-describe 'GET request', typr: :feature do
+describe 'GET request', type: :feature do
     context 'When the request tries to get a teapot' do
       it 'shows 418 teapot code' do
         uri = URI.parse("https://www.google.com/teapot")

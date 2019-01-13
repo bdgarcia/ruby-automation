@@ -2,7 +2,7 @@
 
 require './test/spec_helper.rb'
 
-describe 'Search', typr: :feature do
+describe 'Search', type: :feature do
   describe 'Search google' do
     context 'When the user googles google' do
       it 'shows google in the results' do
