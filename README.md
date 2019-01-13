@@ -10,3 +10,5 @@ En el archivo **/test/google/request.rb** se puede ver como armar un requests se
 ## Factory
 En **/test/factories.rb** se puede ver como implementar factories, en este caso se producen users de la clase /test/models/user.rb, si bien no esta instanciado en ningun ejemplo por el momento, hacerlo seria muy sencillo y se pueden ver ejemplos acá: https://devhints.io/factory_bot
 
+## Jenkins
+El job de integración con jenkins puede verse en el Jenkinsfile situado en el root del repositorio
